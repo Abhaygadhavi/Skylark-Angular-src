@@ -1,0 +1,28 @@
+<form [formGroup]="admin" action="" style="border:1px solid #ccc;width: 60%;"> 
+    <div class="container">
+        <h1 style="text-align: center;">Admin Login</h1>
+        <!-- <div [ngClass]="{'has-error': admin.get('uname').errors && 
+            admin.get('uname').touched || admin.get('uname').dirty }"> -->
+            <label for="un">Username:</label>
+            <input type="text" name="username" formControlName="uname" id="un" required> <br>
+            <span class="text-danger" *ngIf="user && user.touched && user.invalid">Username is Required<br></span>
+            <!-- <span class="help-block" *ngIf="user && user.touched && user.invalid">
+                <span >Username is Required <br></span>
+            </span> -->
+        <!-- </div> -->
+        <!-- <div [ngClass]="{'has-error': admin.get('pswd').errors && 
+            admin.get('pswd').touched || admin.get('pswd').dirty }"> -->
+            <label for="pwd">Password:</label>
+            <input type="password" name="password" formControlName="pswd" id="pwd" required><br>
+            <span class="text-danger" *ngIf="pass && pass.touched && pass.invalid">Password is Required<br></span>
+            <!-- <span class="help-block" *ngIf="admin.get('pswd').errors && 
+                    admin.get('pswd').touched || admin.get('pswd').dirty">
+                    <span *ngIf="admin.get('pswd').errors.required">Password is Required</span>
+            </span>
+        </div> -->
+        <div class="clearfix">
+            <button type="submit" [disabled]="!admin.valid" class="loginbtn" >Login</button>
+            <button type="reset" class="resetbtn">Reset</button>
+        </div>
+    </div>
+</form>

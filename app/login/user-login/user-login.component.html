@@ -1,0 +1,32 @@
+<form [formGroup]="user" action="" style="border:1px solid #ccc;width: 60%;">
+    <div class="container">
+        <p class="p">Not a member yet? <a href="">Sign Up</a></p> 
+        <h1 style="text-align: center;">Login</h1>
+        <input type="radio" id="ph" name = "way" value = "phone" (click)="ph()" checked>
+        <label class="i" for="ph" style="margin-right: 12px;"> <b>Phone Number</b> </label>
+        <input type="radio" id="em" name = "way" value = "email" (click)="em()">
+        <label class="i" for="em"> <b>Email</b> </label><br><br>
+        <div *ngIf="p">
+            <br>
+            <label for="pho"> <b>PhoneNumber:</b> </label>
+            <input type="number" placeholder="Enter Your Phone Number" formControlName="phone" name="phoneNumber" id="pho" required><br>
+            <span class="text-danger" *ngIf="pho && pho.touched && pho.invalid">PhoneNumber is Required<br></span>
+        </div>
+        <div *ngIf="e">
+            <br>
+            <label for="ema"> <b>Email Id:</b> </label>
+            <input type="email" placeholder="Enter Your Email Address" formControlName="email" name="emailId" id="ema" required><br>
+            <span class="text-danger" *ngIf="eml && eml.touched && eml.invalid">Email is Required<br></span>
+        </div><br>
+        <label for="pwd"> <b>Password:</b> </label>
+        <input type="password" placeholder="Enter Password" formControlName="password" name="password" id="pwd" required><br><br>
+        <span class="text-danger" *ngIf="pass && pass.touched && pass.invalid">Password is Required<br></span>
+        <p class="p"><a href="">Forgot Password?</a><br></p>
+        <div class="clearfix">
+            <button type="submit" class="loginbtn">Login</button>
+            <button type="reset" class="resetbtn">Reset</button>
+        </div>
+        
+         
+    </div>
+</form>

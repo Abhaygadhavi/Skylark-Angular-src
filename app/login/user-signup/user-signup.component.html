@@ -1,0 +1,33 @@
+<form [formGroup]="signup" action="" style="border:1px solid #ccc;width: 60%;">
+    <div class="container">
+      <h1 style="text-align: center;">Sign Up</h1>
+      <!-- <p style="text-align: center;">Please fill in this form to create an account.</p> -->
+      <!-- <hr> -->
+  
+      <label for="fn"><b>Full-Name</b></label>
+      <input id="fn" type="text" placeholder="Enter Full-Name" formControlName="name" name="username" required><br>
+      <span class="text-danger" *ngIf="fname && fname.touched && fname.invalid">Full-Name is Required and only alphabets are allowed<br></span>
+
+
+      <label for="e"><b>Email</b></label>
+      <input id="e" type="email" placeholder="Enter Email" formControlName="email" name="email" required><br>
+      <span class="text-danger" *ngIf="eml && eml.touched && eml.invalid">Email is invalid<br></span>
+
+      <label for="ph"><b>Phone-Number</b></label>
+      <input id="ph" type="number" placeholder="Enter Phone-Number" formControlName="phn" name="phone" required><br>
+      <span class="text-danger" *ngIf="phno && phno.touched && phno.invalid">PhoneNumber should be of 10 digits<br></span>
+      
+      <label for="psw"><b>Password</b></label>
+      <input id="psw" type="password" placeholder="Enter Password" formControlName="pswd" name="psw" required><br>
+      <span class="text-danger" *ngIf="pwd && pwd.touched && pwd.invalid">Password must be of atleast 6 characters<br></span>
+  
+      <label for="psw-repeat"><b>Confirm Password</b></label>
+      <input id="psw-repeat" type="password" placeholder="Confirm Password" formControlName="rpswd" name="psw-repeat" required><br>
+      <!-- <span class="text-danger" *ngIf="pwd && pwd!==rpwd" >Both Passwords should match<br></span> -->
+  
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" [disabled]="!signup.valid">Sign Up</button>
+      </div>
+    </div>
+  </form>

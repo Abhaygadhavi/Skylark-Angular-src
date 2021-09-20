@@ -1,0 +1,57 @@
+<div class="container">
+    <h3 style="text-align: center;">Add Flight</h3>
+    <hr>
+    <form action="" class="row g-3">
+        <div class="col-md-6"> 
+            <label for="From" class="form-label">From</label><br>
+            <input type="text" class="form-control-sm" list="datalistOptionsf" id="From" placeholder="From">
+            <datalist id="datalistOptionsf">
+                <option value="Ahmedabad">
+                <option value="Bangalore">
+                <option value="Kolkata">
+                <option value="Chennai">
+                <option value="Lucknow">
+                <option value="Bombay">
+            </datalist>
+        </div>
+        <div class="col-md-6"> 
+            <label for="To" class="form-label">To</label><br>
+            <input type="text" class="form-control-sm" list="datalistOptionst" id="To" placeholder="To">
+            <datalist id="datalistOptionst">
+                <option value="Ahmedabad">
+                <option value="Bangalore">
+                <option value="Kolkata">
+                <option value="Chennai">
+                <option value="Lucknow">
+                <option value="Bombay"></option>
+            </datalist>
+        </div>
+        <div class="col-md-4">
+            <label for="adate">Arrival Date</label><br>
+            <input type="date" class="form-control-lg" id="adate">
+        </div>
+        <div class="col-md-4">
+            <label for="atime">Arrival Time</label><br>
+            <input type="time" class="form-control-lg" id="atime">
+        </div>
+        <div class="col-md-4">
+            <label for="ddate">Departure Date</label><br>
+            <input type="date" class="form-control-lg" id="ddate">
+        </div>
+        <div class="col-md-4">
+            <label for="dtime">Departure Time</label><br>
+            <input type="time" class="form-control-lg" id="dtime">
+        </div>
+        <div class="col-md-4">
+            <label for="price">Price</label><br>
+            <input type="number" placeholder="Price" class="form-control-lg" id="price">
+        </div>
+        <div class="col-md-4">
+            <label for="capacity">Capacity</label><br>
+            <input type="number" placeholder="Capacity" class="form-control-lg" id="capacity">
+        </div>
+        <div class="col-12">
+            <button type="button" class="btn btn-outline-primary">Add Flight</button>
+        </div>
+    </form>
+</div>
